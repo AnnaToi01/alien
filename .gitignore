@@ -239,4 +239,5 @@ $RECYCLE.BIN/
 ## Project specific ignores
 # ignore data folder as it is 6.7GB -- too large to push to GitHub!
 # No need to sync the data if our project is reproducible anyways
-data/raw
+data/raw/sequences.qza
+data/processed/sequences_trimmed.qza
