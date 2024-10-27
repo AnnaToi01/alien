@@ -241,3 +241,16 @@ $RECYCLE.BIN/
 # No need to sync the data if our project is reproducible anyways
 data/raw/sequences.qza
 data/processed/sequences_trimmed.qza
+data/processed/silva-138.1-ssu-nr99-classifier.qza
+data/processed/silva-138.1-ssu-nr99-rna-seqs.qza
+data/processed/silva-138.1-ssu-nr99-seqs-515f-806r-uniq.qza
+data/processed/silva-138.1-ssu-nr99-seqs-515f-806r.qza
+data/processed/silva-138.1-ssu-nr99-seqs-cleaned.qza
+data/processed/silva-138.1-ssu-nr99-seqs-derep-uniq.qza
+data/processed/silva-138.1-ssu-nr99-seqs-discard.qza
+data/processed/silva-138.1-ssu-nr99-seqs-filt.qza
+data/processed/silva-138.1-ssu-nr99-seqs.qza
+data/processed/silva-138.1-ssu-nr99-tax-515f-806r-derep-uniq.qza
+data/processed/silva-138.1-ssu-nr99-tax-derep-uniq.qza
+data/processed/silva-138.1-ssu-nr99-tax.qza
+data/processed/demux*
