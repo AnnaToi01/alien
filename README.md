@@ -18,16 +18,20 @@ The file structure follows the recommended structure as described in `/ref/proje
 
 ```text
 .
+.
 ├── README.md
 ├── data
-│   ├── processed
-│   └── raw
+│   ├── processed [29 processed *.qza and *.qzv files]
+│   └── raw
+│       └── metadata.tsv
 ├── docs
 ├── environment.yml
 ├── ref
-├── results
+├── results [8 visualizations]
 ├── scripts
-│   └── 01_data_download_and_preprocessing.ipynb
+│   ├── 00_EDA.ipynb
+│   ├── 01_data_download_and_preprocessing.ipynb
+│   └── 02_taxonomy.ipynb
 └── src
 ```
 
@@ -36,13 +40,15 @@ The file structure follows the recommended structure as described in `/ref/proje
   - `raw`: contains the original data obtained via downloading from polybox. _This folder **should not** be modified._
   - `processed`: contains intermediate processed data, like `.qzv` or `.qza` files. It's not ignored to avoid re-running analysis pipelines. But ideally the synced files should not be larger than `100MB`.
 - `docs`: contains all documentation and reports.
-- `results`: contains the final visualizations and tables (`.tsv` or `.csv` files) to put into the report.
-- `scripts`: contains all scripts used in the project.
-  - `01_data_download_and_preprocessing.ipynb`: Jupyter notebook for downloading and preprocessing (denoising, clustering etc) data.
-- `src`: a folder with custom-made modules that will be reused in scripts and notebooks.
+- `environment.yml`: a `conda` environment file to recreate the environment used in the project.
 - `ref`: contains all reference materials, including the project description, the project structure handout, and any other relevant information related to the group project.
   - Contents in the reference folder might be copied into README.md for better accessibility.
-- `environment.yml`: a `conda` environment file to recreate the environment used in the project.
+- `results`: contains the final visualizations (`.png`) and tables (`.tsv` or `.csv` files) to put into the report.
+- **`scripts`: contains all scripts used in the project.**
+  - **`00_EDA.ipynb`**: Jupyter notebook for exploratory data analysis on metadata.
+  - **`01_data_download_and_preprocessing.ipynb`**: Jupyter notebook for downloading and preprocessing (denoising, clustering etc) data.
+  - **`02_taxonomy.ipynb`**: Jupyter notebook for taxonomy classification via SILVA database.
+- `src`: a folder with custom-made modules that will be reused in scripts and notebooks.
 
 ## Tasks
 
@@ -108,6 +114,7 @@ conda update -n base conda
 conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
 ```
+
 #### Create `conda` environment
 
 You can create a local `conda` environment using
@@ -120,5 +127,6 @@ By default it will create an environment named `qiime2`, and has the exact copy 
 
 > The configuration file `environment.yml` was almost the same as [QIIME2 Amplicon Distribution](https://docs.qiime2.org/2024.5/install/native/#qiime-2-amplicon-distribution), with `picrust2` installed.
 > This is also almost the `conda` environment used in the cluster, except that:
+>
 > 1. Metagenomics tools (`q2-assembly`, `q2-fondue` etc) are not included
 > 2. `mamba` and `jupyterhub` related dependencies are not included
