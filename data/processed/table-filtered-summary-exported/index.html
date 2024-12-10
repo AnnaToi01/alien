@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2_feature_table : summarize</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/base-template.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/bootstrap.min.js" charset="utf-8"></script>
+    
+<script src="util.js"></script> 
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="q2templatesheader" class="row">
+        <div class="col-lg-12">
+          <a href="http://qiime2.org/">
+            <img src="./q2templateassets/img/qiime2-rect-200.png"
+            alt="QIIME 2">
+          </a>
+        </div>
+      </div>
+        
+
+  <div class="row">
+    <div class="col-lg-12">
+      <ul class="nav nav-tabs">
+        
+          <li class="active">
+            <a href="index.html">
+              Overview
+            </a>
+          </li>
+        
+          <li class="">
+            <a href="sample-frequency-detail.html">
+              Interactive Sample Detail
+            </a>
+          </li>
+        
+          <li class="">
+            <a href="feature-frequency-detail.html">
+              Feature Detail
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      
+<div class="row">
+  <div class="col-lg-12">
+    <h1>Table summary</h1>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Summary Statistic</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Number of samples</th>
+              <td id="number-of-samples"></td>
+            </tr>
+            <tr>
+              <th scope="row">Number of features</th>
+              <td id="number-of-features"></td>
+            </tr>
+            <tr>
+              <th scope="row">Total frequency</th>
+              <td id="total-frequency"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h1>Frequency per sample</h1>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Frequency</th>
+            </tr>
+          </thead>
+          <tbody id="sample-table-body"></tbody>
+        </table>
+      </div>
+      
+      <div class="col-lg-6">
+        <p class="text-center">
+            <a href="sample-frequencies.pdf">
+                <img src="sample-frequencies.png" width="700" height="500" class="center-block">
+                <br>
+                <p class="text-center">Download as PDF</p>
+            </a>
+        </p>
+      </div>
+      
+    </div>
+
+    <h1>Frequency per feature</h1>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Frequency</th>
+            </tr>
+          </thead>
+          <tbody id="feature-table-body"></tbody>
+        </table>
+      </div>
+      
+      <div class="col-lg-6">
+        <p class="text-center">
+            <a href="feature-frequencies.pdf">
+                <img src="feature-frequencies.png" width="700" height="500" class="center-block">
+                <br>
+                <p class="text-center">Download as PDF</p>
+            </a>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script id="sample-table-data" type="application/json">
+{"Frequency":{"Minimum frequency":7.0,"1st quartile":107731.5,"Median frequency":154996.5,"3rd quartile":190440.5,"Maximum frequency":299732.0,"Mean frequency":150844.3}}
+</script>
+
+<script id="feature-table-data" type="application/json">
+{"Frequency":{"Minimum frequency":1.0,"1st quartile":31.0,"Median frequency":160.0,"3rd quartile":1110.0,"Maximum frequency":1091020.0,"Mean frequency":7731.7}}
+</script>
+
+<script type="text/javascript">
+  const numberOfSamples = document.getElementById("number-of-samples");
+  numberOfSamples.innerText = formatter.format(102);
+
+  const numberOfFeatures = document.getElementById("number-of-features");
+  numberOfFeatures.innerText = formatter.format(1990);
+
+  const totalFrequency = document.getElementById("total-frequency");
+  totalFrequency.innerText = formatter.format(15386121);
+
+  const sampleTableBody = document.getElementById("sample-table-body");
+  const sampleTableData = JSON.parse(document.getElementById("sample-table-data").innerHTML);
+
+  formatTable(sampleTableBody, sampleTableData, Object.keys(sampleTableData["Frequency"]).reverse());
+
+  const featureTableBody = document.getElementById("feature-table-body");
+  const featureTableData = JSON.parse(document.getElementById("feature-table-data").innerHTML);
+
+  formatTable(featureTableBody, featureTableData, Object.keys(featureTableData["Frequency"]).reverse());
+</script>
+
+
+    </div>
+  </div>
+
+
+    </div>
+    <script type="text/javascript">
+      if (window.frameElement) {
+          document.getElementById('q2templatesheader').remove();
+      }
+    </script>
+    
+    
+  </body>
+</html>
