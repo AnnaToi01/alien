@@ -254,3 +254,6 @@ data/processed/silva-138.1-ssu-nr99-tax-515f-806r-derep-uniq.qza
 data/processed/silva-138.1-ssu-nr99-tax-derep-uniq.qza
 data/processed/silva-138.1-ssu-nr99-tax.qza
 data/processed/demux*
+
+# ignore manual installation folder of picrust
+q2-picrust2-2024.5_0
