@@ -1,0 +1,11 @@
+sample-id	forward-absolute-filepath	reverse-absolute-filepath
+SRR23801859	/home/jovyan/alien/data/raw/SRRfiles/SRR23801859_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801859_pass_2.fastq
+SRR23801860	/home/jovyan/alien/data/raw/SRRfiles/SRR23801860_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801860_pass_2.fastq
+SRR23801866	/home/jovyan/alien/data/raw/SRRfiles/SRR23801866_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801866_pass_2.fastq
+SRR23801898	/home/jovyan/alien/data/raw/SRRfiles/SRR23801898_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801898_pass_2.fastq
+SRR23801908	/home/jovyan/alien/data/raw/SRRfiles/SRR23801908_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801908_pass_2.fastq
+SRR23801935	/home/jovyan/alien/data/raw/SRRfiles/SRR23801935_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801935_pass_2.fastq
+SRR23801941	/home/jovyan/alien/data/raw/SRRfiles/SRR23801941_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801941_pass_2.fastq
+SRR23801944	/home/jovyan/alien/data/raw/SRRfiles/SRR23801944_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801944_pass_2.fastq
+SRR23801959	/home/jovyan/alien/data/raw/SRRfiles/SRR23801959_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801959_pass_2.fastq
+SRR23801999	/home/jovyan/alien/data/raw/SRRfiles/SRR23801999_pass_1.fastq	/home/jovyan/alien/data/raw/SRRfiles/SRR23801999_pass_2.fastq
