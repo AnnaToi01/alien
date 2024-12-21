@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2-diversity: Adonis</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/base-template.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/bootstrap.min.js" charset="utf-8"></script>
+    
+    
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="q2templatesheader" class="row">
+        <div class="col-lg-12">
+          <a href="http://qiime2.org/">
+            <img src="./q2templateassets/img/qiime2-rect-200.png"
+            alt="QIIME 2">
+          </a>
+        </div>
+      </div>
+        
+  <h1>Adonis Test</h1>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <a href="adonis.tsv">
+        <p>Download Adonis test results as tsv</p>
+      </a>
+      <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Df</th>
+      <th>SumsOfSqs</th>
+      <th>MeanSqs</th>
+      <th>F.Model</th>
+      <th>R2</th>
+      <th>Pr(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Cohort_Number</th>
+      <td>1</td>
+      <td>0.381532</td>
+      <td>0.381532</td>
+      <td>7.183029</td>
+      <td>0.064874</td>
+      <td>0.001</td>
+    </tr>
+    <tr>
+      <th>Stool_Consistency</th>
+      <td>2</td>
+      <td>0.124258</td>
+      <td>0.062129</td>
+      <td>1.169694</td>
+      <td>0.021128</td>
+      <td>0.219</td>
+    </tr>
+    <tr>
+      <th>Patient_Sex</th>
+      <td>1</td>
+      <td>0.062439</td>
+      <td>0.062439</td>
+      <td>1.175534</td>
+      <td>0.010617</td>
+      <td>0.238</td>
+    </tr>
+    <tr>
+      <th>Sample_Day</th>
+      <td>1</td>
+      <td>0.124924</td>
+      <td>0.124924</td>
+      <td>2.351911</td>
+      <td>0.021241</td>
+      <td>0.012</td>
+    </tr>
+    <tr>
+      <th>Recovery_Day</th>
+      <td>1</td>
+      <td>0.036872</td>
+      <td>0.036872</td>
+      <td>0.694180</td>
+      <td>0.006270</td>
+      <td>0.780</td>
+    </tr>
+    <tr>
+      <th>Cohort_Number:Stool_Consistency</th>
+      <td>2</td>
+      <td>0.102485</td>
+      <td>0.051243</td>
+      <td>0.964735</td>
+      <td>0.017426</td>
+      <td>0.493</td>
+    </tr>
+    <tr>
+      <th>Cohort_Number:Patient_Sex</th>
+      <td>1</td>
+      <td>0.068903</td>
+      <td>0.068903</td>
+      <td>1.297219</td>
+      <td>0.011716</td>
+      <td>0.193</td>
+    </tr>
+    <tr>
+      <th>Stool_Consistency:Patient_Sex</th>
+      <td>2</td>
+      <td>0.091057</td>
+      <td>0.045528</td>
+      <td>0.857154</td>
+      <td>0.015483</td>
+      <td>0.681</td>
+    </tr>
+    <tr>
+      <th>Stool_Consistency:Sample_Day</th>
+      <td>2</td>
+      <td>0.128222</td>
+      <td>0.064111</td>
+      <td>1.207004</td>
+      <td>0.021802</td>
+      <td>0.231</td>
+    </tr>
+    <tr>
+      <th>Patient_Sex:Sample_Day</th>
+      <td>1</td>
+      <td>0.067268</td>
+      <td>0.067268</td>
+      <td>1.266449</td>
+      <td>0.011438</td>
+      <td>0.190</td>
+    </tr>
+    <tr>
+      <th>Cohort_Number:Recovery_Day</th>
+      <td>1</td>
+      <td>0.073758</td>
+      <td>0.073758</td>
+      <td>1.388624</td>
+      <td>0.012541</td>
+      <td>0.138</td>
+    </tr>
+    <tr>
+      <th>Stool_Consistency:Recovery_Day</th>
+      <td>2</td>
+      <td>0.072079</td>
+      <td>0.036040</td>
+      <td>0.678513</td>
+      <td>0.012256</td>
+      <td>0.892</td>
+    </tr>
+    <tr>
+      <th>Patient_Sex:Recovery_Day</th>
+      <td>1</td>
+      <td>0.056433</td>
+      <td>0.056433</td>
+      <td>1.062454</td>
+      <td>0.009596</td>
+      <td>0.360</td>
+    </tr>
+    <tr>
+      <th>Sample_Day:Recovery_Day</th>
+      <td>1</td>
+      <td>0.037257</td>
+      <td>0.037257</td>
+      <td>0.701426</td>
+      <td>0.006335</td>
+      <td>0.740</td>
+    </tr>
+    <tr>
+      <th>Cohort_Number:Stool_Consistency:Patient_Sex</th>
+      <td>2</td>
+      <td>0.079782</td>
+      <td>0.039891</td>
+      <td>0.751023</td>
+      <td>0.013566</td>
+      <td>0.844</td>
+    </tr>
+    <tr>
+      <th>Stool_Consistency:Patient_Sex:Sample_Day</th>
+      <td>2</td>
+      <td>0.088390</td>
+      <td>0.044195</td>
+      <td>0.832046</td>
+      <td>0.015029</td>
+      <td>0.672</td>
+    </tr>
+    <tr>
+      <th>Cohort_Number:Stool_Consistency:Recovery_Day</th>
+      <td>2</td>
+      <td>0.195615</td>
+      <td>0.097807</td>
+      <td>1.841399</td>
+      <td>0.033261</td>
+      <td>0.030</td>
+    </tr>
+    <tr>
+      <th>Cohort_Number:Patient_Sex:Recovery_Day</th>
+      <td>1</td>
+      <td>0.039355</td>
+      <td>0.039355</td>
+      <td>0.740924</td>
+      <td>0.006692</td>
+      <td>0.748</td>
+    </tr>
+    <tr>
+      <th>Stool_Consistency:Patient_Sex:Recovery_Day</th>
+      <td>2</td>
+      <td>0.095315</td>
+      <td>0.047657</td>
+      <td>0.897237</td>
+      <td>0.016207</td>
+      <td>0.567</td>
+    </tr>
+    <tr>
+      <th>Stool_Consistency:Sample_Day:Recovery_Day</th>
+      <td>2</td>
+      <td>0.118933</td>
+      <td>0.059467</td>
+      <td>1.119565</td>
+      <td>0.020223</td>
+      <td>0.299</td>
+    </tr>
+    <tr>
+      <th>Patient_Sex:Sample_Day:Recovery_Day</th>
+      <td>1</td>
+      <td>0.083170</td>
+      <td>0.083170</td>
+      <td>1.565818</td>
+      <td>0.014142</td>
+      <td>0.105</td>
+    </tr>
+    <tr>
+      <th>Cohort_Number:Stool_Consistency:Patient_Sex:Recovery_Day</th>
+      <td>2</td>
+      <td>0.105359</td>
+      <td>0.052680</td>
+      <td>0.991788</td>
+      <td>0.017915</td>
+      <td>0.438</td>
+    </tr>
+    <tr>
+      <th>Stool_Consistency:Patient_Sex:Sample_Day:Recovery_Day</th>
+      <td>2</td>
+      <td>0.195198</td>
+      <td>0.097599</td>
+      <td>1.837480</td>
+      <td>0.033191</td>
+      <td>0.013</td>
+    </tr>
+    <tr>
+      <th>Residuals</th>
+      <td>65</td>
+      <td>3.452526</td>
+      <td>0.053116</td>
+      <td>NaN</td>
+      <td>0.587051</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <td>100</td>
+      <td>5.881131</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.000000</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </div>
+
+
+    </div>
+    <script type="text/javascript">
+      if (window.frameElement) {
+          document.getElementById('q2templatesheader').remove();
+      }
+    </script>
+    
+    
+  </body>
+</html>

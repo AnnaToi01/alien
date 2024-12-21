@@ -1,5 +1,32 @@
 import pandas as pd
 from scipy.stats import spearmanr
+from statsmodels.stats.multitest import multipletests
+
+def correct_for_multiple_testing(
+    df: pd.DataFrame, p_value_column: str = "p_value", method: str = "fdr_bh"
+) -> pd.DataFrame:
+    """
+    Correct p-values for multiple testing using user specified method (default: Ben
+    jamini-Hochberg).
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing p-values.
+    p_value_column (str): Name of the column containing p-values.
+    method (str): Method to use for multiple testing correction.
+
+    Returns:
+    df (pd.DataFrame): DataFrame with corrected p-values and rejection decision.
+    """
+
+    # Apply Benjamini-Hochberg (FDR) correction
+    p_values = df[p_value_column]
+    reject, p_value_bh, _, _ = multipletests(p_values, method=method)
+
+    # Add a column for the adjusted p-values and rejection decision
+    df['q_value'] = p_value_bh
+    df['reject_null'] = reject  # True if null hypothesis is rejected (significant)
+
+    return df
 
 
 # Define function to calculate Spearman correlation
